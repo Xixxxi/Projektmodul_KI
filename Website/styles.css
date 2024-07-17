@@ -31,6 +31,26 @@ body {
     height: 100vh; /* Full viewport height */
     background-color: #2A3931;
     overflow: hidden;
+    position: relative; /* Ensure it's the reference for absolute positioning */
+}
+
+.logo {
+    position: absolute; /* Change from fixed to absolute */
+    top: 20px; /* Adjust the top position as needed */
+    left: 20px; /* Adjust the left position as needed */
+    max-width: 30%;
+    height: auto;
+    z-index: 1; /* Ensure it's on top of other elements */
+    animation: flicker 2s infinite; /* Add flicker animation */
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0;
+    }
 }
 
 .trailer {
