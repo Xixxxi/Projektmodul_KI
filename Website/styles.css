@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #0B1F12; */
+    background-color: #001301;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 20px;
+    background-color: #2A3931;
+    overflow: hidden;
+    background-image: linear-gradient(to top, #0B1F12 2.5%, #2A3931 11%);
+}
+
+.trailer {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: #0B1F12;
+}
+
+.trailer::before,
+.trailer::after,
+.intro::before,
+.intro::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 2px;
+    height: 2px;
+}
+
+/* Top-left line */
+.intro::before {
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 10%;
+    clip-path: polygon(0 0, 100% 100%, 100% 98%, 2% 0);
+}
+
+/* Top-right line */
+.intro::after {
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 10%;
+    clip-path: polygon(100% 0, 0 100%, 0 98%, 98% 0);
+}
+
+/* Bottom-left line */
+.trailer::before {
+    bottom: 0;
+    left: 0;
+    width: 12.5%;
+    height: 12.5%;
+    clip-path: polygon(0 100%, 100% 0, 98% 0, 0 98%);
+    transform: translate(-100%, 100%);
+}
+
+/* Bottom-right line */
+.trailer::after {
+    bottom: 0;
+    right: 0;
+    width: 12.5%;
+    height: 12.5%;
+    clip-path: polygon(100% 100%, 0 0, 2% 0, 100% 98%);
+    transform: translate(100%, 100%);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    height: 80px;
+}
+
+.videos {
+    background-color: #27362F;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 0; /* Ensure there's no margin */
+}
+
+.team-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.rahmen, .eigentuemer {
+    width: 48%;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer > p {
+    text-align: center;
+    font-size: 14px;
+}
