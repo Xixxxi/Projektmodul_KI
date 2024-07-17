@@ -31,7 +31,7 @@ body {
     margin-bottom: 20px;
     background-color: #2A3931;
     overflow: hidden;
-    background-image: linear-gradient(to top, #0B1F12 2.5%, #2A3931 11%);
+    background-image: linear-gradient(to top, #0B1F12 2.5%, #2A3931 70%);
 }
 
 .trailer {
@@ -41,6 +41,8 @@ body {
     width: 80%;
     height: 80%;
     background-color: #0B1F12;
+    border: 1px solid white;
+
 }
 
 .trailer::before,
@@ -49,7 +51,7 @@ body {
 .intro::after {
     content: '';
     position: absolute;
-    background-color: black;
+    background-color: white;
     width: 2px;
     height: 2px;
 }
