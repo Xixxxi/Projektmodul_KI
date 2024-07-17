@@ -161,7 +161,6 @@ p {
     height: auto;
     z-index: 1; /* Ensure it's on top of other elements */
     margin-bottom: 30px;
-    animation: flicker 2s infinite; /* Add flicker animation */
 }
 
 .footer {
