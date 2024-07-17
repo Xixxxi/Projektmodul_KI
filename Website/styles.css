@@ -9,11 +9,11 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
     font-family: Arial, sans-serif;
-    /* background-color: #0B1F12; */
     background-color: #001301;
     color: #fff;
     line-height: 1.6;
@@ -25,30 +25,26 @@ body {
 }
 
 .intro {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
     background-color: #2A3931;
     overflow: hidden;
-    background-image: linear-gradient(to top, #0B1F12 2.5%, #2A3931 70%);
 }
 
 .trailer {
-    position: absolute;
-    top: 10%;
-    left: 10%;
     width: 80%;
-    height: 80%;
+    height: 35%; /* Maintain 16:9 aspect ratio */
     background-color: #0B1F12;
     border: 1px solid white;
-
+    position: relative;
 }
 
 .trailer::before,
 .trailer::after,
-.intro::before,
-.intro::after {
+.trailer .top-left,
+.trailer .top-right {
     content: '';
     position: absolute;
     background-color: white;
@@ -57,21 +53,23 @@ body {
 }
 
 /* Top-left line */
-.intro::before {
+.trailer .top-left {
     top: 0;
     left: 0;
-    width: 10%;
-    height: 10%;
-    clip-path: polygon(0 0, 100% 100%, 100% 98%, 2% 0);
+    width: 12.5%;
+    height: 12.5%;
+    clip-path: polygon(0 0, 100% 100%, 98% 100%, 0 2%);
+    transform: translate(-100%, -100%);
 }
 
 /* Top-right line */
-.intro::after {
+.trailer .top-right {
     top: 0;
     right: 0;
-    width: 10%;
-    height: 10%;
-    clip-path: polygon(100% 0, 0 100%, 0 98%, 98% 0);
+    width: 12.5%;
+    height: 12.5%;
+    clip-path: polygon(100% 0, 0 100%, 2% 100%, 100% 2%);
+    transform: translate(100%, -100%);
 }
 
 /* Bottom-left line */
