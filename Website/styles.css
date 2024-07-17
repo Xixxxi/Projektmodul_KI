@@ -113,6 +113,8 @@ body {
 }
 
 .section {
+    margin-top: 30px;
+
     margin-bottom: 30px;
 }
 
@@ -122,6 +124,7 @@ h2 {
 }
 
 p {
+    font-size: 16px;
     margin-bottom: 15px;
 }
 
@@ -142,6 +145,14 @@ p {
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.technicalArchitecture, .boxFromAbove {
+    max-width: 100%;
+    height: auto;
+    z-index: 1; /* Ensure it's on top of other elements */
+    margin-bottom: 30px;
+    animation: flicker 2s infinite; /* Add flicker animation */
 }
 
 .footer {
