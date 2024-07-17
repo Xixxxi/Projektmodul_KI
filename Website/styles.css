@@ -57,8 +57,32 @@ body {
     width: 80%;
     height: 35%; /* Maintain 16:9 aspect ratio */
     background-color: #0B1F12;
-    border: 1px solid white;
+    border: 1.25px solid white;
     position: relative;
+}
+
+.trailer-video {
+    width: 99.9%;
+    height: 99.9%;
+    object-fit: cover; /* Ensure the video covers the entire div */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mute-button {
+    position: absolute;
+    bottom: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.mute-button img {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+
 }
 
 .trailer::before,

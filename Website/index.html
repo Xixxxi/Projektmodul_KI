@@ -10,9 +10,11 @@
     <section class="intro">
         <img src="public/WORTH_IT.png" alt="Logo" class="logo">
         <div class="trailer">
+            <video id="trailer-video" src="public/trailer.mp4" class="trailer-video" autoplay muted loop></video>
             <div class="top-left"></div>
             <div class="top-right"></div>
         </div>
+        <button class="mute-button" id="mute-button"><img id="mute-icon" src="public/unmute.png" alt="Mute Button"></button>
     </section>
     <div class="container">
         <section class="section" id="challenge">
@@ -26,12 +28,12 @@
         <section class="section" id="process">
             <h2>3 Process</h2>
             <div class="process-grid">
-                <div class="grid-item"><img src="public/prozess1.png" alt="Prozess 1"></div>
-                <div class="grid-item"><img src="public/prozess2.png" alt="Prozess 2"></div>
-                <div class="grid-item"><img src="public/prozess3.jpg" alt="Prozess 3"></div>
-                <div class="grid-item"><img src="public/prozess4.png" alt="Prozess 4"></div>
-                <div class="grid-item"><img src="public/prozess5.png" alt="Prozess 5"></div>
-                <div class="grid-item"><img src="public/prozess6.png" alt="Prozess 6"></div>
+                <div class="grid-item"><img src="public/prozesse1.png" alt="Prozess 1"></div>
+                <div class="grid-item"><img src="public/prozesse2.png" alt="Prozess 2"></div>
+                <div class="grid-item"><img src="public/prozesse3.png" alt="Prozess 3"></div>
+                <div class="grid-item"><img src="public/prozesse4.png" alt="Prozess 4"></div>
+                <div class="grid-item"><img src="public/prozesse5.png" alt="Prozess 5"></div>
+                <div class="grid-item"><img src="public/prozesse6.png" alt="Prozess 6"></div>
             </div>
         </section>
         <div class="videos">
@@ -70,5 +72,22 @@
         </div>
         <p>&copy; All Rights Reserved</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById('trailer-video');
+            var muteButton = document.getElementById('mute-button');
+            var muteIcon = document.getElementById('mute-icon');
+
+            muteButton.addEventListener('click', function() {
+                video.muted = !video.muted;
+                if (video.muted) {
+                    muteIcon.src = 'public/mute.png';
+                } else {
+                    muteIcon.src = 'public/unmute.png';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
