@@ -41,7 +41,7 @@ body {
     max-width: 30%;
     height: auto;
     z-index: 1; /* Ensure it's on top of other elements */
-    animation: flicker 2s infinite; /* Add flicker animation */
+    /* animation: flicker 2s infinite;  */
 }
 
 @keyframes flicker {
@@ -137,9 +137,8 @@ body {
 }
 
 .section {
-    margin-top: 30px;
-
-    margin-bottom: 30px;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 h2 {
@@ -156,7 +155,7 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
 
 .grid-item {
@@ -174,24 +173,90 @@ p {
 }
 
 .videos {
-    background-color: #27362F;
-    padding: 20px;
-    margin-bottom: 20px;
+    /* background-color: #27362F; */
+    /* padding: 20px; */
+    margin-bottom: 70px;
     text-align: center;
 }
 
-.technicalArchitecture, .boxFromAbove {
+.video{
+    width: 80%;
+    height: 35%; /* Maintain 16:9 aspect ratio */
+    background-color: #0B1F12;
+    border: 1.25px solid white;
+    position: relative;
+}
+
+.technicalArchitecture {
     max-width: 100%;
     height: auto;
-    z-index: 1; /* Ensure it's on top of other elements */
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.boxFromAbove {
+    max-width: 50%; /* Adjust the size of the image */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.box-description {
+    max-width: 50%;
+    font-size: 16px;
+    line-height: 1;
+    color: #fff;
+}
+
+#team {
+    margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Dynamically adjust based on the number of items */
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid white; /* Add a border if needed */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Center the last row when there are fewer items */
+.team-grid > :nth-child(4),
+.team-grid > :nth-child(5) {
+    justify-self: center; /* Center the items horizontally */
+}
+
+
 
 .footer {
     background-color: white;
     color: black;
     width: 100%;
     padding: 20px;
+    padding-top: 40px;
     box-sizing: border-box;
     position: relative;
     left: 0;
